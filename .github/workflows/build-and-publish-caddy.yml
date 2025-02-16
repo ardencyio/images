@@ -1,4 +1,4 @@
-name: Build and publish Caddy
+name: Build, Publish Caddy
 run-name: ${{ github.actor }} is running this Action
 
 on: 
@@ -49,7 +49,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           build-args: VERSION=${{ steps.read-version.outputs.latest_version }}
           push: true
-          tags: ghcr.io/easyselfhost/caddy:latest,ghcr.io/easyselfhost/caddy:${{ steps.read-version.outputs.latest_version }}
+          tags: ghcr.io/ardencyio/caddy:latest,ghcr.io/ardencyio/caddy:${{ steps.read-version.outputs.latest_version }}
       
       
       
